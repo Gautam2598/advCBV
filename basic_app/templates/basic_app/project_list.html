@@ -1,0 +1,14 @@
+{% include 'basic_app/base.html' %}
+
+{% block body_block %}
+
+<div class="container">
+    <h1>Hello {{ compList.name }}</h1>
+    <ul>
+        {% for i in compList %}
+        <li><a href="{% url 'project_add' i.pk %}" >{{ i.name }}</a></li>
+    </ul>
+        {% endfor %}
+</div>
+
+{% endblock %}

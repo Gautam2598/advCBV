@@ -1,0 +1,38 @@
+{% include 'basic_app/base.html' %}
+
+{% block body_block %}
+    
+
+<table class="table table-striped">
+
+
+    <tr>
+        <th>NAME</th>
+        <th>CONTACT</th>
+        <th>Email</th>
+        <th>LOGO</th>
+    
+    </tr>
+
+    {% for company in company_list %}
+
+    <tr>
+        <td>{{ company.name}}</td>
+        <td>{{ company.contact }}</td>
+        <td>{{ company.email }}</td>
+        <td><img src="{{ company.logo.url }}"style="height:45px;width:45px;"></td>
+
+        <td>
+            <a href="companyUpdate/{{ company.pk }}">Edit</a>
+            <a href="companyDelete/{{ company.pk }}">Delete</a>
+    
+        </td>
+    </tr>
+
+    
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% include 'basic_app/base.html' %}
+
+{% block body_block %}
+
+<table class="table table-striped">
+
+
+    <tr>
+        <th>NAME</th>
+        <th>EMPLOYEE-ID</th>
+        <th>DEPARTMENT</th>    
+        <th>EMAIL</th>    
+        <th>PHONE</th>    
+    </tr>
+
+    {% for employee in employee_list %}
+
+    <tr>
+        <td>{{ employee.name}}</td>
+        <td>{{ employee.employeeID }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

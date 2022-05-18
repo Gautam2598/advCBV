@@ -1,0 +1,25 @@
+{% include 'basic_app/base.html' %}
+
+{% block body_block %}
+
+<table class="table table-striped">
+
+
+    <tr>
+        <th>COMPANY</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>    
+    </tr>
+
+    {% for tech in technologies_list %}
+
+    <tr>
+        <td>{{ tech.company}}</td>
+        <td>{{ tech.name }}</td>
+        <td>{{ tech.description }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

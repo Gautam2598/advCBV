@@ -1,0 +1,22 @@
+{% include 'basic_app/base.html' %}
+{% block body_block %}
+<h3>Welcome, Click To see Details of each category</h3>
+<ul>
+    <li><a href="{% url 'company_list' %}">Company</a></li>
+    <li><a href="{% url 'department_list' %}">Department</a></li>
+    <li><a href="{% url 'technologies_list' %}">Technologies</a></li>
+    <li><a href="{% url 'project_list' %}">Project</a></li>
+    <li><a href="{% url 'employee_list' %}">Employees</a></li>
+</ul>
+
+<br>
+<h3>To add Items to the corresponding lists click on the respective field.</h3>
+<ul>
+    <li><a href="{% url 'companyCreate' %}">Company</a></li>
+    <li><a href="#">Department</a></li>
+    <li><a href="#">Technologies</a></li>
+    <li><a href="#">Project</a></li>
+    <li><a href="#">Employees</a></li>
+</ul>
+
+{% endblock %}
